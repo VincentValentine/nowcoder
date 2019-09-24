@@ -3,10 +3,10 @@
 
 class Solution {
 public:
-	void replaceSpace(char *str,int length) {
+    void replaceSpace(char *str,int length) {
         int i, j, len;
-        
-        for(i=len=0; i<length; ++i) 
+         
+        for(i=len=0; i<length; ++i)
             if(str[i] == ' ') ++len;
         len = len*2+length;
         str[len] = '\0';
@@ -14,5 +14,5 @@ public:
             if(str[i] != ' ') str[j--] = str[i];
             else { str[j--] = '0'; str[j--] = '2'; str[j--] = '%'; }
         }
-	}
+    }
 };
